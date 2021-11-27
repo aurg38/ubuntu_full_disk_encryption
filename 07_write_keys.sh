@@ -7,7 +7,7 @@ DEVP="${DEV}$( if [[ "$DEV" =~ "nvme" ]]; then echo "p"; fi )"
 DM="${DM}$( if [[ "$DM" =~ "nvme" ]]; then echo "p"; fi )"
 
 # update cryptsetup-initramfs
-/usr/apt install -y cryptsetup-initramfs
+/usr/bin/apt install -y cryptsetup-initramfs
 
 # setup initramfs
 echo "KEYFILE_PATTERN=/etc/luks/*.keyfile" >> /etc/cryptsetup-initramfs/conf-hook
